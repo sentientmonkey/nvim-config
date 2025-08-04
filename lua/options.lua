@@ -26,9 +26,9 @@ vim.opt.showmatch = true
 vim.opt.hidden = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
--- vim.opt.wildmode=list:longest       " Bash-like tab completion
+vim.opt.wildmode = "list:longest"
 vim.opt.scrolloff = 3
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 
 vim.opt.smartcase = true
 vim.opt.autoread = true
@@ -37,7 +37,8 @@ vim.opt.hls = true
 
 -- vim.opt.completeopt=longest,menuone " autocomplete improved
 
--- vim.opt.listchars:tab:»·,trail:·    " show tabs and trailing whitespace
+vim.opt.listchars.tab = "»·"
+vim.opt.listchars.trail = "·"
 vim.opt.list = true
 
 vim.opt.clipboard = "unnamed"

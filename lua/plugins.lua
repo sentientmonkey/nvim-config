@@ -49,4 +49,6 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- avante
-require('avante').setup()
+require('avante').setup({
+  build = "make",
+})
