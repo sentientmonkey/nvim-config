@@ -1,3 +1,12 @@
+vim.o.updatetime = 250
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+   callback = function()
+     vim.diagnostic.open_float(nil, { focus = false })
+   end
+})
+
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
 vim.lsp.config('yamlls', {
   settings = {
     yaml = {
@@ -17,6 +26,49 @@ vim.lsp.config('yamlls', {
     },
   },
 })
+
+vim.lsp.config('nixd', {
+  settings = {
+    nix = {
+      format = {
+        enable = true,
+        command = 'nixpkgs-fmt',
+      },
+      linter = {
+        enable = true,
+      },
+    },
+  },
+})
+
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    rust = {
+      format = {
+        enable = true,
+        command = 'cargo-fmt',
+      },
+      linter = {
+        enable = true,
+      },
+    },
+  },
+})
+
+vim.lsp.config('terraoform-ls', {
+  settings = {
+    terraform = {
+      format = {
+        enable = true,
+        command = 'terraform fmt',
+      },
+      linter = {
+        enable = true,
+      },
+    },
+  },
+})
+
 
 vim.lsp.enable('nixd')
 vim.lsp.enable('rust_analyzer')
