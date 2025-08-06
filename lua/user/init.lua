@@ -1,5 +1,4 @@
 require('user.colors')
 require('user.keymaps')
 require('user.lsp-config')
-require('user.options')
 require('user.plugins')

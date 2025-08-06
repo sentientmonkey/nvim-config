@@ -1,3 +1,6 @@
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -11,7 +14,6 @@ vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
 vim.opt.visualbell = true
 
 vim.opt.showcmd = true
-
 
 -- 
 vim.opt.expandtab = true
