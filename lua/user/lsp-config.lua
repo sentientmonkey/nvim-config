@@ -55,7 +55,7 @@ vim.lsp.config('rust_analyzer', {
   },
 })
 
-vim.lsp.config('terraoform-ls', {
+vim.lsp.config('terraformls', {
   settings = {
     terraform = {
       format = {
@@ -68,7 +68,6 @@ vim.lsp.config('terraoform-ls', {
     },
   },
 })
-
 
 vim.lsp.enable('nixd')
 vim.lsp.enable('rust_analyzer')
