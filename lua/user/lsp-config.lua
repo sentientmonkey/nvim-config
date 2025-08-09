@@ -1,10 +1,11 @@
 vim.o.updatetime = 250
-vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-   callback = function()
-     vim.diagnostic.open_float(nil, { focus = false })
-   end
-})
+-- vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+--    callback = function()
+--      vim.diagnostic.open_float(nil, { focus = false })
+--    end
+-- })
 
+-- Autoformat on save
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 vim.lsp.config('yamlls', {
@@ -69,6 +70,18 @@ vim.lsp.config('terraformls', {
   },
 })
 
+require('lspconfig').bashls.setup {
+  cmd = { "bash-language-server", "start" },
+  filetypes = { "sh", "bash" },
+  settings = {
+    bashIde = {
+      shellcheckPath = "shellcheck",
+      enableSourceErrorDiagnostics = true,
+      enableShellcheck = true
+    }
+  }
+}
+
 vim.lsp.enable('nixd')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ruby_lsp')
@@ -76,3 +89,4 @@ vim.lsp.enable('racket_langserver')
 vim.lsp.enable('elixirls')
 vim.lsp.enable('terraformls')
 vim.lsp.enable('yamlls')
+vim.lsp.enable('bashls')
