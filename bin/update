@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cd ~/.config/nvim
+
+nvim --headless -c 'Lazy! sync' -c 'qa'
+
