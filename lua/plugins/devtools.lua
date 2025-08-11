@@ -4,7 +4,7 @@ return {
     "tpope/vim-commentary",
     vim.api.nvim_set_keymap('n', '<leader>c', ':Commentary<cr>', {noremap = true}),
   },
-  "github/copilot.vim",
+  { "github/copilot.vim", },
   {
     "joshuavial/aider.nvim",
     opts = {

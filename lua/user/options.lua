@@ -15,14 +15,13 @@ vim.opt.visualbell = true
 
 vim.opt.showcmd = true
 
--- 
 vim.opt.expandtab = true
 vim.opt.tabstop = 2 
 vim.opt.shiftwidth = 2
 vim.opt.number = true
--- vim.opt.nowrap = true
--- vim.opt.wildignore+=tags
--- vim.opt.wildignore+=tmp/** 
+vim.opt.wrap = false
+vim.opt.wildignore:append("tags")
+vim.opt.wildignore:append("tmp/**")
 
 vim.opt.showmatch = true
 vim.opt.hidden = true
@@ -37,10 +36,9 @@ vim.opt.autoread = true
 
 vim.opt.hls = true
 
--- vim.opt.completeopt=longest,menuone " autocomplete improved
+vim.opt.completeopt = { "longest", "menuone" } -- autocomplete improved
 
-vim.opt.listchars.tab = "»·"
-vim.opt.listchars.trail = "·"
+vim.opt.listchars:append({ tab = "»·", trail = "·" })
 vim.opt.list = true
 
 vim.opt.clipboard = "unnamed"
