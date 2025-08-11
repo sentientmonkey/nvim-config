@@ -54,3 +54,4 @@ require('lualine').setup {
   }
 }
 
+require('avante').setup({})

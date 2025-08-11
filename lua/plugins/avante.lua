@@ -44,6 +44,7 @@ return {
   {
     "yetone/avante.nvim",
     build = "make",
+    opts = {},
   },
 }
 
