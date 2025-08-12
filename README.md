@@ -7,7 +7,8 @@ This is my neovim config. It's a replacement for my existing [vim-config](https:
 Normally this can be installed directly by cloning.
 
 ```bash
-git clone git@sentientmonkey:nvim-config.git ~/.config/nvim
+git clone git@github.com:sentientmonkey/nvim-config.git ~/.config/nvim
+```
 cd ~/.config/nvim
 ./bin/install
 ```
