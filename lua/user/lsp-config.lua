@@ -70,9 +70,7 @@ vim.lsp.config('terraformls', {
   },
 })
 
-require('lspconfig').bashls.setup {
-  cmd = { "bash-language-server", "start" },
-  filetypes = { "sh", "bash" },
+vim.lsp.config('bashls', {
   settings = {
     bashIde = {
       shellcheckPath = "shellcheck",
@@ -80,7 +78,7 @@ require('lspconfig').bashls.setup {
       enableShellcheck = true
     }
   }
-}
+})
 
 vim.lsp.enable('nixd')
 vim.lsp.enable('rust_analyzer')
