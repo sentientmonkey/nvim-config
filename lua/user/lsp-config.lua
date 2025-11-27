@@ -80,9 +80,24 @@ vim.lsp.config('bashls', {
   }
 })
 
+vim.lsp.config('rubocop', {
+  settings = {
+    rubocop = {
+      format = {
+        enable = true,
+        command = 'rubocop -A',
+      },
+      linter = {
+        enable = true,
+      },
+    },
+  },
+})
+
 vim.lsp.enable('nixd')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ruby_lsp')
+vim.lsp.enable('rubocop')
 vim.lsp.enable('racket_langserver')
 vim.lsp.enable('elixirls')
 vim.lsp.enable('terraformls')
