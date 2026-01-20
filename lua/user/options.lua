@@ -38,7 +38,13 @@ vim.opt.hls = true
 
 vim.opt.completeopt = { "longest", "menuone" } -- autocomplete improved
 
-vim.opt.listchars:append({ tab = "»·", trail = "·" })
+vim.opt.listchars:append({
+  tab = "»·",
+  trail = "·",
+--    space = "·",
+--    multispace = "···+",
+})
+
 vim.opt.list = true
 
 vim.opt.clipboard = "unnamed"
