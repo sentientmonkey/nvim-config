@@ -7,19 +7,19 @@ return {
   {
     "github/copilot.vim",
   },
-  {
-    "joshuavial/aider.nvim",
-    opts = {
-      auto_manage_context = false,
-      default_bindings = false,
-      debug = true,
-      vim = true, 
-      ignore_buffers = {},
-    },
+  -- {
+  --   "joshuavial/aider.nvim",
+  --   opts = {
+  --     auto_manage_context = false,
+  --     default_bindings = false,
+  --     debug = true,
+  --     vim = true, 
+  --     ignore_buffers = {},
+  --   },
 
-    vim.api.nvim_set_keymap('n', '<leader>Ao', ':AiderOpen --no-auto-commits<CR>', {noremap = true, silent = true}),
-    vim.api.nvim_set_keymap('n', '<leader>Am', ':AiderAddModifiedFiles<CR>', {noremap = true, silent = true})
-  },
+  --   vim.api.nvim_set_keymap('n', '<leader>Ao', ':AiderOpen --no-auto-commits<CR>', {noremap = true, silent = true}),
+  --   vim.api.nvim_set_keymap('n', '<leader>Am', ':AiderAddModifiedFiles<CR>', {noremap = true, silent = true})
+  -- },
   {
     "janko/vim-test",
      vim.api.nvim_set_keymap('n', '<leader>t', ':TestNearest<cr>', {}),
