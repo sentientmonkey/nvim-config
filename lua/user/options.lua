@@ -49,6 +49,6 @@ vim.opt.list = true
 
 vim.opt.clipboard = "unnamed"
 
-vim.opt.colorcolumn = "100"
+-- vim.opt.colorcolumn = "100"
 vim.opt.autoread = true
 
